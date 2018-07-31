@@ -21,13 +21,12 @@ app.get('/first-template', function(req, res){
     res.render('first-template');
 });
 
+app.get('/auth/google', function(req, res) {
+	res.send("ZALOGOWANO")
+})
+
 app.listen(3000);
 
 app.use(function (req, res, next) {
     res.status(404).send('Wybacz, nie mogliśmy odnaleźć tego, czego żądasz!')
 });
-
-/*res.render('/dynamic', {
-    user:
-        { name: "Johnny", age: "20" }
-});*/
